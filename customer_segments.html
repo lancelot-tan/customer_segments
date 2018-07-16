@@ -13339,7 +13339,12 @@ Once you have performed this implementation, the dataset will be stored in the v
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>There are data points considered outliers for more than one feature, examples are customer 65, 66, 165</p>
+<p>There are data points considered outliers for more than one feature.</p>
+<p>Customer 65 - outlier for Fresh and Frozen
+Customer 66 - outlier for Fresh and Delicatessen
+Customer 75 - outlier for Grocery and Detergents/Paper
+Customer 128 - outlier for Fresh and Delicatessen
+Customer 154 - outlier for Grocery and Delicateessen</p>
 <p>I will remove them in this case, because the categories for which they were outliers for are different.  However, if in cases where I observe say samples all being outliers for the same categories, then it is indication they might form a cluster, then in those cases I will not remove them</p>
 <p>Data points added in the <code>outliers</code> do not seem to have outliers in the same categories, hence I will remove them because existence of outliers will skew the results of most clustering algorithms like k-means</p>
 
@@ -14067,9 +14072,9 @@ Sample point 2 predicted to be in Cluster 1
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>Sample 0 is in cluster 0 - cafe/restaurant</p>
-<p>Sample 1 is in cluster 1 - supermarket</p>
-<p>Sample 2 is in cluster 2 - supermarket</p>
+<p>Sample 0 is predicted to be in cluster 0 - cafe/restaurant which is consistent to my original intuition that it is a deli type establishment</p>
+<p>Sample 1 is predicted to be in cluster 1 - supermarket which is the same as my original intution</p>
+<p>Sample 2 is predicted to be in cluster 2 - supermarket but my original intuition is that it is a cafe, this is likely due to fact that the sample is not a very typical sample</p>
 
 </div>
 </div>
